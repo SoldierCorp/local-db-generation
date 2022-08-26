@@ -1,6 +1,15 @@
 {
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "@turf/turf": "^6.5.0",
     "axios": "^0.27.2"
-  }
+  },
+  "name": "local-db-generation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.soldiercorp:SoldierCorp/local-db-generation.git",
+  "author": "SoldierCorp <soldiercrp@gmail.com>",
+  "license": "MIT"
 }

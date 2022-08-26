@@ -94,9 +94,9 @@ const getSubstationsWithPowerLines = (substations, powerLines) => {
         const substationId = `${substation.properties.NAME}_${substation.properties.OP_DIST}`
 
         for (const powerLine of powerLines.features) {
-            const poweLineId = `${powerLine.properties.Substation}_${powerLine.properties.Master_CDF.split('_')[1]}`
+            const powerLineId = `${powerLine.properties.Substation}_${powerLine.properties.Master_CDF.split('_')[1]}`
 
-            if (poweLineId === substationId) {
+            if (powerLineId === substationId) {
                 powerLineIds = [...powerLineIds, powerLine.properties.Master_CDF]
             }
         }
@@ -126,12 +126,12 @@ const AddAllData = (regionsSubstations, powerLines) => {
             let substationsWithPowerLines = []
 
             for (const powerLine of powerLines.features) {
-                const poweLineId = `${powerLine.properties.Substation}_${powerLine.properties.Master_CDF.split('_')[1]}`
+                const powerLineId = `${powerLine.properties.Substation}_${powerLine.properties.Master_CDF.split('_')[1]}`
                 // const substationId = `${substation.properties.NAME}_${substation.properties.OP_DIST}`
-                if (poweLineId === substation) {
+                if (powerLineId === substation) {
                     powerLineIds = [...powerLineIds, powerLine.properties.Master_CDF]
 
-                    substationsWithPowerLines = [...substationsWithPowerLines, poweLineId]
+                    substationsWithPowerLines = [...substationsWithPowerLines, powerLineId]
                     // substationsWithPowerLines = [...substationsWithPowerLines, { ...powerLine }]
                     // substationsWithPowerLines = [...substationsWithPowerLines, { ...powerLine, geometry: null }]
                 }
